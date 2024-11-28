@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!-- dimenisone e blabla-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- chiedo i dati all utente-->
+    <input id="nome" placeholder="Nome">
+    <input id="cognome" placeholder="Cognome">
+    <input id="indirizzo" placeholder="Indirizzo">
+    <input id="citta" placeholder="Città">
+    <!-- bottone per aggiungere i dati unavlta messi-->
+    <button id="aggiungi" onclick="samuelemax()">Aggiungi</button>
+    <table id="tabella"></table>
+    <script>
+        //array per i dati 
+        const dati = [];
+        function samuelemax(){
+            //inserisco  dati
+            const nome = document.getElementById('nome').value;
+            const cognome = document.getElementById('cognome').value;
+            const indirizzo = document.getElementById('indirizzo').value;
+            const citta = document.getElementById('citta').value;
+            //tabella+elemtnti tabs
+            var tabella = document.getElementById("tabella");
+            var riga= document.createElement('tr');
+            var elemento1 = document.createElement("th");
+            elemento1.innerHTML=nome;
+            var elemento2 = document.createElement("th");
+            elemento2.innerHTML=cognome;
+            var elemento3 = document.createElement("th");
+            elemento3.innerHTML=indirizzo;
+            var elemento4 = document.createElement("th");
+            elemento4.innerHTML=citta;
+            //righe
+            riga.appendChild(elemento1);
+            riga.appendChild(elemento2);
+            riga.appendChild(elemento3);
+            riga.appendChild(elemento4);
+            tabella.appendChild(riga);
+
+        }
+    </script>
+</body>
+</html>
